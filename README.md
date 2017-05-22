@@ -1,23 +1,23 @@
 
 Step 1:
 
-git clone https://github.com/KumailHussain/SpsInterviewTask.git
+## git clone https://github.com/KumailHussain/SpsInterviewTask.git
 
 step 2:
 
-cd SpsInterviewTask
+## cd SpsInterviewTask
 
 step3:
 
-npm install
+## npm install
 
 step4:
 
-bower install
+## bower install
 
 step5
 
-grunt serve
+## grunt serve
 
 
 step6:
