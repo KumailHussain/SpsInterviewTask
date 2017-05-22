@@ -1,12 +1,20 @@
-# spsnet-task
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+Step 1:
+git clone https://github.com/KumailHussain/SpsInterviewTask.git
 
-## Build & development
+step 2:
+cd SpsInterviewTask
 
-Run `grunt` for building and `grunt serve` for preview.
+step3:
+npm install
 
-## Testing
+step4:
+bower install
 
-Running `grunt test` will run the unit tests with karma.
+step5
+grunt serve
+
+
+step6:
+Open browser
+http://localhost:9000/
