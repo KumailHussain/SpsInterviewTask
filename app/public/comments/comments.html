@@ -1,0 +1,32 @@
+<div ng-init="getAll()">
+    <div ng-show="loading==false">
+        <app-loader></app-loader>
+    </div>
+    <div ng-show="loading">
+        <div ng-show="showGrid">
+            <div class="header-ag">
+                <label>Comments Per Page</label>
+                <select ng-model="value" ng-change="onPage(value)">
+                    <option value="50">50</option>
+                    <option value="">100</option>
+                    <option value="150">150</option>
+                    <option value="200">200</option>
+                </select>
+                <label class="header-entries">No of Comments {{currentEntries}}-{{totalEntries}}</label>
+            </div>
+            <div ag-grid='gridOptions' class="ag-material" style="height: 400px;"></div>
+            <div class="footer-ag">
+                <button class="button" ng-click="preComment($index)">Pre</button>
+                <span ng-repeat="n in [].constructor(paged) track by $index">
+            <button  class="button" ng-click="selectPage($index)">{{$index+1}}</button>
+            </span>
+                <button class="button" ng-click="nextComment($index)">Next</button>
+                <label class="footer-entries">Page # {{currentPage}}-{{paged}} </label>
+            </div>
+        </div>
+        <div ng-if="!showGrid">
+            <button class="button button-align" ng-click="back()">Back</button>
+            <comment-detail></comment-detail>
+        </div>
+    </div>
+</div>

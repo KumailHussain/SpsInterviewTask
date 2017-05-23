@@ -1,0 +1,64 @@
+.button {
+    margin: 1%;
+    color: #2b542c;
+    background: white;
+    border: 2px solid;
+    border-radius: 25px;
+}
+
+.button:hover {
+    background: #222222;
+    color: white;
+}
+
+.ag-material {
+    width: 1000px;
+    padding-left: 15%;
+}
+
+.row {
+    padding-left: 15%;
+}
+
+.form-group {
+    padding-left: 15%;
+    width: 30%;
+}
+
+.header-ag {
+    margin-left: 15%;
+    height: 40px;
+    padding-left: 1%;
+    background: skyblue;
+    width: 814px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding-top: 1%;
+}
+
+.footer-ag {
+    margin-left: 15%;
+    height: 40px;
+    padding-left: 1%;
+    background: skyblue;
+    width: 814px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    margin-top: 1%;
+}
+
+.header-entries {
+    float: right;
+    padding-right: 2%;
+}
+
+.footer-entries {
+    float: right;
+    padding-right: 2%;
+    margin-top: 1%;
+}
+
+.button-align {
+    margin-left: 7%;
+    margin-top: 5%;
+}
