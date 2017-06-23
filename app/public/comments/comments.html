@@ -1,32 +1,39 @@
-<div ng-init="getAll()">
-    <div ng-show="loading==false">
-        <app-loader></app-loader>
-    </div>
-    <div ng-show="loading">
-        <div ng-show="showGrid">
-            <div class="header-ag">
-                <label>Comments Per Page</label>
-                <select ng-model="value" ng-change="onPage(value)">
-                    <option value="50">50</option>
-                    <option value="">100</option>
-                    <option value="150">150</option>
-                    <option value="200">200</option>
-                </select>
-                <label class="header-entries">No of Comments {{currentEntries}}-{{totalEntries}}</label>
-            </div>
-            <div ag-grid='gridOptions' class="ag-material" style="height: 400px;"></div>
-            <div class="footer-ag">
-                <button class="button" ng-click="preComment($index)">Pre</button>
-                <span ng-repeat="n in [].constructor(paged) track by $index">
-            <button  class="button" ng-click="selectPage($index)">{{$index+1}}</button>
-            </span>
-                <button class="button" ng-click="nextComment($index)">Next</button>
-                <label class="footer-entries">Page # {{currentPage}}-{{paged}} </label>
+h1>Demo: Simple Lists</h1>
+
+<div class="alert alert-success">
+    <strong>Instructions:</strong>
+    Drag &amp; drop the list items to move them around, or just click to select them.
+    If that's too boring, check out the <a href="#/nested">nested container demo</a>
+</div>
+
+<div class="simpleDemo row" ng-controller="SimpleDemoController">
+
+    <div class="col-md-8">
+
+        <div class="row">
+            <div ng-repeat="(listName, list) in models.lists" >
+                <div class="col-md-8" ng-if="listName!='B'">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">List {{listName}}</h3>
+                    </div>
+                    <div class="panel-body" ng-include="'public/comments/simple.html'"></div>
+                </div>
+                </div>
+                <div class="col-md-4" ng-if="listName=='B'">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">List {{listName}}</h3>
+                        </div>
+                        <div class="panel-body" ng-include="'public/comments/simple.html'"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div ng-if="!showGrid">
-            <button class="button button-align" ng-click="back()">Back</button>
-            <comment-detail></comment-detail>
-        </div>
+
+        <div view-source="simple"></div>
+
     </div>
+
+
 </div>
